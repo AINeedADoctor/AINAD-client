@@ -1,5 +1,6 @@
 .chat-container {
     width: 30%;
+<<<<<<< HEAD
     margin:auto;
     font-size: 1em;
 }
@@ -18,4 +19,19 @@
 .description {
     font-size: .9em;
     padding: 0;
+=======
+    height: 30em;
+    padding: 0em;
+}
+
+.chat-header {
+    margin:0;
+    width: 100%;
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+>>>>>>> origin/master
 }
