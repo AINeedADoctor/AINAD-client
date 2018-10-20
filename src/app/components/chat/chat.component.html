@@ -11,19 +11,15 @@
     </div>
   </div>
   <div class="card-body content">
-    <app-message [bot]="true" content="Provant un missatges fdfdf"></app-message>
-    <app-message [bot]="true" content="Provant un missatges fdfdf"></app-message>
-    <app-message content="Provant un missatges"></app-message>
-    <app-message [bot]="true" content="Provant un missatges fdfdf"></app-message>
-    <app-message content="Provant un missatges"></app-message>
+    <app-message *ngFor="let m of messages" [bot]="m.bot" content="{{ m.content }}"></app-message>
   </div>
   <div class="card-footer text-muted">
     <div class="row">
       <div class="col-9">
-        <input placeholder="Message" class="form-control" id="msg">
+        <input [(ngModel)]="message" placeholder="Message" class="form-control" id="msg">
       </div>
       <div class="col-3">
-        <button class="btn btn-outline btn-info mb-2">Send</button>
+        <button class="btn btn-outline btn-info mb-2" (click)="sendMessageToClank()">Send</button>
       </div>
     </div>
   </div>
