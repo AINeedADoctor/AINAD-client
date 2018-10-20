@@ -1,0 +1,16 @@
+.chat-container {
+    width: 30%;
+    height: 30em;
+    padding: 0em;
+}
+
+.chat-header {
+    margin:0;
+    width: 100%;
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
