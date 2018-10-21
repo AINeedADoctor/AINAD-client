@@ -7,10 +7,6 @@
     "declaration": false,
     "module": "es2015",
     "moduleResolution": "node",
-    "types": [
-      "jquery",
-        "materialize-css"
-    ],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",

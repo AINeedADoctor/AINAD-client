@@ -1,27 +1,27 @@
-<mz-card
-  class="grey lighten-5 black-text chat-container"
-  [hoverable]="true">
-
-  <mz-card-title class="chat-header">
-    Clank the Healthcare assistant
-  </mz-card-title>
-
-  <mz-card-content class="chat-body">
-    -dfadsfa
-    -fadfaffasdfa-a
-    afafdadfaf
-    adfafaffdas
-  </mz-card-content>
-
-  <mz-card-action>
-    <input mz-input
-    [label]="'Email'"
-    id="msg"
-    length="150"
-    placeholder="Message..."
-    type="text">
-    <button [float]="true" mz-button>
-      button
-    </button>
-  </mz-card-action>
-</mz-card>
+<div class="chat-container card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-3">
+          <img width="60" src="assets/bot.png" alt="">
+      </div>
+      <div class="col-9">
+          <h3>  Clank</h3>
+          <div class="description text-muted">The intelligent healthcare assistant</div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body content">
+    <app-message *ngFor="let m of messages" [bot]="m.bot" content="{{ m.content }}"></app-message>
+  </div>
+  <span>Made with love. ~ <font color="red">❤</font></span>
+  <div class="card-footer text-muted">
+    <div class="row">
+      <div class="col-9">
+        <input [(ngModel)]="message" placeholder="Ask something..." class="form-control" id="msg">
+      </div>
+      <div class="col-3">
+        <button class="btn btn-outline btn-info mb-2" (click)="sendMessageToClank()">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

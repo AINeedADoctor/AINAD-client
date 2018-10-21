@@ -1,0 +1,26 @@
+.card {
+    width: 60%;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+.msg {
+    font-size: .5em;
+    text-align: left;
+}
+
+.hour {
+    font-size: 10px;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.bot {
+    background-color: lightgray;
+}
+
+.own {
+    background-color: lightgreen;
+    float: right;
+}
