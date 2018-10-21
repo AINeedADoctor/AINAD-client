@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { DialogflowService } from 'src/app/services/dialogflow.service';
 import { GooglePlacesService } from 'src/app/services/google-places.service';
 
@@ -17,6 +17,13 @@ export class ChatComponent implements OnInit {
   }> = [];
   constructor(private dialogFlow: DialogflowService,
               private googlePlaces: GooglePlacesService) { }
+
+  @HostListener('document:keypress', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.code === "Enter") {
+      this.sendMessageToClank();
+    }
+  }
 
   ngOnInit() {
   }
@@ -55,3 +62,4 @@ export class ChatComponent implements OnInit {
     )
   }
 }
+

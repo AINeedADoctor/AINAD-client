@@ -541,6 +541,10 @@ input, select, textarea {
 		width: 90%;
 	}
 
+	.tittle {
+		color: whitesmoke !important;
+	}
+
 		#header h1 {
 			font-size: 4.35em;
 			font-weight: 900;
