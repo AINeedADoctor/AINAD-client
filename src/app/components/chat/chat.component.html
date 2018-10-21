@@ -2,7 +2,7 @@
   <div class="card-header">
     <div class="row">
       <div class="col-3">
-          <img width="60" src="assets/bot.png" alt="">
+          <img width="70" src="assets/bot.png" alt="">
       </div>
       <div class="col-9">
           <h3>  Clank</h3>
@@ -13,7 +13,7 @@
   <div #scrollMe class="card-body content" >
     <app-message *ngFor="let m of messages" [bot]="m.bot" content="{{ m.content }}" @Fading></app-message>
   </div>
-  <span>Made with love. ~ <font color="red">❤</font></span>
+  <span>Made with love<font color="red">❤</font></span>
   <div class="card-footer text-muted">
     <div class="row">
       <div class="col-9">
