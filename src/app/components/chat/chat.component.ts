@@ -38,6 +38,10 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit() { 
+    this.dialogFlow.triggerEvent("Welcome").subscribe(
+      res =>  this.messages.push({ bot: true, content: res }),
+      err => alert(err)
+    );
     this.scrollToBottom();
   }
 
