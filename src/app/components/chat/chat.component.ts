@@ -29,6 +29,9 @@ export class ChatComponent implements OnInit {
   }
 
   public sendMessageToClank() {
+    if (this.message === "")
+      return;
+      
     if (this.message.includes("hospital")) {
       this.messages.push({ bot: false, content: this.message });
       this.mockClank("hospital");
