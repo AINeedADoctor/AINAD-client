@@ -11,6 +11,6 @@ export class WakeUpHerokuService {
   constructor(private http: HttpClient) { }
 
   wakeUp() {
-    return this.http.get("https://ai-nad-api.herokuapp.com");
+    return this.http.get("https://cors-anywhere.herokuapp.com/https://ai-nad-api.herokuapp.com");
   }
 }

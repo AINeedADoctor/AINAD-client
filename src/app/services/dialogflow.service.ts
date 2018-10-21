@@ -20,6 +20,13 @@ export class DialogflowService {
     );
   }
 
+  triggerEvent(event: string): Observable<string> {
+    const headers = this.authHeaders();
+    return this.http.get(this.url + "query?v=20150910&e=" + event + "&lang=en&sessionId=84414206-6807-4f73-a4de-6f4d8fa129c7", headers).pipe(
+      map((r: any) => r.result.fulfillment.speech),
+    );
+  }
+
   private authHeaders() {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',

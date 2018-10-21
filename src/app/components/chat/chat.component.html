@@ -10,8 +10,8 @@
       </div>
     </div>
   </div>
-  <div class="card-body content">
-    <app-message *ngFor="let m of messages" [bot]="m.bot" content="{{ m.content }}"></app-message>
+  <div #scrollMe class="card-body content" >
+    <app-message *ngFor="let m of messages" [bot]="m.bot" content="{{ m.content }}" @Fading></app-message>
   </div>
   <span>Made with love. ~ <font color="red">❤</font></span>
   <div class="card-footer text-muted">
