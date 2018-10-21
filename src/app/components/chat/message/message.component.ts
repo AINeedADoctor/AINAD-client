@@ -9,8 +9,10 @@ export class MessageComponent implements OnInit {
 
   @Input() content : string;
   @Input() bot: boolean = false;
+  
   hour: string;
-
+  name: string = "Me";
+  
   constructor() {
     var date = new Date();
     var currentHour: any = date.getHours();
@@ -25,6 +27,8 @@ export class MessageComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.bot) 
+      this.name = "Clank"
   }
 
 }
