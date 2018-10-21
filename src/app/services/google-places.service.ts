@@ -21,8 +21,8 @@ export class GooglePlacesService {
                             + '&key=' + this.key).pipe(
                               map((res: any) => res.results[0]),
                               map(res => {
-                                let lat = res.geometry.lat;
-                                let lng = res.geometry.lng;
+                                let lat = res.geometry.location.lat;
+                                let lng = res.geometry.location.lng;
 
                                 return {
                                   google_link: "https://www.google.com/maps/@" + lat + "," + lng,

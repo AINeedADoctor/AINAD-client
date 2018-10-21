@@ -54,7 +54,7 @@ export class ChatComponent implements OnInit {
   private mockClank(body: string) {
     this.googlePlaces.getPlace(body).subscribe(
       res => {
-        this.messages.push({ bot: true, content: "<b>" + res.name + "</b>" });
+        this.messages.push({ bot: true, content: "<b>" + res.name + '</b><br><a href="' + res.google_link + '"><i class="fas fa-map-marker-alt"></i> Google maps</a>' });
       },
       err => {
         console.log(err);
