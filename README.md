@@ -1,27 +1,27 @@
 # AINeedADoctor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
+## Inspiration
+We thought that there are a lot of eHealth chatbots, but only a few control your mental status. We did a bot that helps in that aspect.
 
-## Development server
+## What it does
+Clank helps you searching hospitals, pharmacies, and giving ambulance or expert information. Furthermore and more importantly, it gives you the possibility to do an extensive test to predict your actual mental state or another to predict if you will have mental status problems in the future because of bad routine habits.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## How we built it
+For the user interface, we used an angular client that integrates the ehealth bot. This bot uses the dialog flow API to make the proper decisions in every moment and Google-Cloud to make proper recommendations.
 
-## Code scaffolding
+The backend, done in flask, contains the two models that predict the mental status: 
+First, we have an algorithm that predicts the **actual** mental state of the user. This machine learning algorithm uses **Ada Boost** to classify the state of the user.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Second, we have another algorithm that predicts the **future** mental state of the user. This ML algorithm classifies the user mental state using a **Logistic Regression** Model.
 
-## Build
+## Challenges we ran into
+We spent a lot of time searching datasets that could fit our idea and a lot of time reading the documentation of the bot API.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Accomplishments that we're proud of
+We are happy that we managed to create a working product, able to help people day by day and that is able to help the society with their health problems.
 
-## Running unit tests
+## What we learned
+We learned how to use the Google Places API and the Dialog Flow API and also improved our skills in datascience and machine learning.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## What's next for AINAD
+More models and better accuracy. To offer a top quality bot, it will be needed to iterate the machine learning part and improve the bot communication part.
