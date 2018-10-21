@@ -1,4 +1,5 @@
 <div class="card" [ngClass]="{'bot': bot, 'own': !bot}">
+  <p class="name text-muted"><i class="fas fa-comment-alt"></i> {{ name }}</p>
   <p class="msg">{{ content }}</p>
   <p class="hour text-muted">{{ hour }}</p>
 </div>
