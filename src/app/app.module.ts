@@ -9,6 +9,7 @@ import { ChatComponent } from './components/chat/chat.component';
 
 import { MessageComponent } from './components/chat/message/message.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GooglePlacesService } from './services/google-places.service';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    GooglePlacesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

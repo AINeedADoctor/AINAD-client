@@ -13,7 +13,15 @@ export class MessageComponent implements OnInit {
 
   constructor() {
     var date = new Date();
-    this.hour = date.getHours() + ":" + date.getMinutes();
+    var currentHour: any = date.getHours();
+    if (currentHour < 10) 
+      currentHour = "0" + currentHour; 
+
+    var minutes : any = date.getMinutes() 
+    if (minutes < 10) 
+      minutes = "0" + minutes; 
+
+    this.hour = currentHour + ":" + minutes;
   }
 
   ngOnInit() {

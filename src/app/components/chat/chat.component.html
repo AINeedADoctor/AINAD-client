@@ -2,7 +2,7 @@
   <div class="card-header">
     <div class="row">
       <div class="col-3">
-          <img width="60" src="assets/bot.jpeg" alt="">
+          <img width="60" src="assets/bot.png" alt="">
       </div>
       <div class="col-9">
           <h3>  Clank</h3>
@@ -13,10 +13,11 @@
   <div class="card-body content">
     <app-message *ngFor="let m of messages" [bot]="m.bot" content="{{ m.content }}"></app-message>
   </div>
+  <span>Made with love. ~ <font color="red">❤</font></span>
   <div class="card-footer text-muted">
     <div class="row">
       <div class="col-9">
-        <input [(ngModel)]="message" placeholder="Message" class="form-control" id="msg">
+        <input [(ngModel)]="message" placeholder="Ask something..." class="form-control" id="msg">
       </div>
       <div class="col-3">
         <button class="btn btn-outline btn-info mb-2" (click)="sendMessageToClank()">Send</button>

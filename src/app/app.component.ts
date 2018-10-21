@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GooglePlacesService } from './services/google-places.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AINeedADoctor';
+
+  constructor(googlePlaces: GooglePlacesService) {
+    navigator.geolocation.getCurrentPosition((pos) => {
+      googlePlaces.location = pos.coords;
+    });
+  }
 }
